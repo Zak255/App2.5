@@ -6,9 +6,9 @@
 //
 
 struct Question {
-    let title: String
-    let type: ResponseType
-    let answers: [Answer]
+    var title: String
+    var type: ResponseType
+    var answers: [Answer]
     
     static func getQuestions () -> [Question] {
     [
@@ -18,16 +18,15 @@ struct Question {
             answers: [
            Answer(title: "Стейк", type: .dog ),
            Answer(title: "рыба", type: .cat),
-                Answer(title: "мясо", type: .lion),
-                Answer(title: "кукуруза", type: .rabbit)
-       
+           Answer(title: "мясо", type: .lion),
+           Answer(title: "кукуруза", type: .rabbit)
         ]
      
     ),
         
-        Question(
-            title: "Что вам нравиться больше всего?",
-            type: .multiple,
+    Question(
+        title: "Что вам нравиться больше всего?",
+        type: .multiple,
             answers: [
             Answer(title: "Плавать", type: .dog ),
             Answer(title: "Играть", type: .cat),
@@ -36,7 +35,6 @@ struct Question {
            
             ]
         ),
-            
             
     Question(
         title: "Любите ли вы поездки на авто?",
